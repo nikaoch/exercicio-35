@@ -1,15 +1,16 @@
-import Footer from "./components/Footer/index.tsx";
-import Header from "./components/Header/index.tsx";
-import RestList from "./components/RestList/index.tsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/index.tsx";
 import { GlobalCss } from "./styles.ts";
 
 function App() {
   return (
     <>
     <GlobalCss/>
-    <Header/>
-    <RestList/>
-    <Footer/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }

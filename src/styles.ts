@@ -1,5 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+export const cores = {
+    branco: '#fff',
+    salmao: '#E66767',
+    beje: '#FFEBD9',
+    bejeClaro: '#FFF8F2'
+}
+
 export const GlobalCss = createGlobalStyle`
     * {
         padding: 0;
@@ -10,7 +17,7 @@ export const GlobalCss = createGlobalStyle`
         font-family: Roboto, sans serif;
 
         body {
-            background-color: #FFF8F2;
+            background-color: ${cores.bejeClaro}
         }
     } 
 `

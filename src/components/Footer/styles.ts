@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { cores } from "../../styles.ts";
 
 export const FooterContent = styled.div`
-    background-color: #FFEBD9;
+    background-color: ${cores.beje};
     display: block;
     text-align: center;
     padding-bottom: 40px;
@@ -16,6 +17,6 @@ export const FooterContent = styled.div`
 
     p {
         font-size: 10px;
-        color: #E66767;
+        color: ${cores.salmao};
     }
 `

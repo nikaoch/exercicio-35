@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { cores } from "../../styles.ts";
 
 export const Fundo = styled.div`
     width: 100%;
@@ -17,7 +18,7 @@ export const HeaderContent = styled.div`
     }
 
     p {
-        color: #E66767;
+        color: ${cores.salmao};
         font-size: 36px;
         font-weight: 900;
     }
