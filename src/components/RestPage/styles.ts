@@ -62,6 +62,11 @@ export const Food = styled.div`
     background-color: ${cores.salmao};
     padding: 8px;
 
+    img {
+        width: 304px;
+        height: 168px;
+    }
+
     .description {
         margin: 8px 0;
         font-size: 14px;

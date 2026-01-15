@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/ladolcevitatrattoria" element={<RestPage/>}/>
+        <Route path="/:id" element={<RestPage/>}/>
       </Routes>
     </BrowserRouter>
     </>

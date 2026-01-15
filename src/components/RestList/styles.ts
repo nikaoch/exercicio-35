@@ -20,6 +20,11 @@ export const ListItem = styled.li`
         font-size: 14px;
     }
 
+    > img {
+        width: 472px;
+        height: 216px;
+    }
+
     button {
         font-weight: bold;
         color: ${cores.beje};
