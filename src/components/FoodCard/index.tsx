@@ -3,6 +3,7 @@ import { BtnAdd, BtnClose, Card, CardContent, Description } from "./styles.ts";
 import { useDispatch } from "react-redux";
 import { add } from "../../store/reducers/cart.ts";
 import { Food } from "../../App.tsx";
+import React from "react";
 
 export type FoodItem = {
     id: number;
@@ -43,7 +44,7 @@ const FoodCard = ({food, onClose}: Props) => {
                         <h3>{food.nome}</h3>
                         <p>{food.descricao}</p>
                         <p>Serve: <strong>{food.porcao}</strong></p>
-                        <BtnAdd type="button" onClick={AddToCart}>Adicionar ao carrinho - R$ {food.preco}</BtnAdd>
+                        <BtnAdd type="button" onClick={AddToCart}>Adicionar ao carrinho - R$ {food.preco + '0'}</BtnAdd>
                         <BtnClose type="button" onClick={onClose}>X</BtnClose>
                     </Description>
                 </CardContent>

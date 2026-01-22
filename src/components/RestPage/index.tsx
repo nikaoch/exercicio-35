@@ -9,10 +9,11 @@ import FoodCard, { FoodItem } from "../FoodCard/index.tsx";
 import FoodCart from "../Cart/index.tsx";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/index.ts";
+import React from "react";
 
 type RestInfos = {
     id: number;
-    nome: string;
+    titulo: string;
     tipo: string;
     capa: string;
 }
@@ -94,7 +95,7 @@ const RestPage = () => {
         <Fundo style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${infos?.capa})` }}>
             <Container>
                 <h2>{infos?.tipo}</h2>
-                <h1>{infos?.nome}</h1>
+                <h1>{infos?.titulo}</h1>
             </Container>
         </Fundo>
         <Container>
