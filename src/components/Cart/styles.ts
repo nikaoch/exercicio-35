@@ -15,7 +15,9 @@ export const Cart = styled.div`
 
 export const CartContent = styled.div`
     display: block;
-    padding: 32px 8px;
+    width: 360px;
+    max-width: 100%;
+    padding: 32px 8px 16px;
     background-color: ${cores.salmao};
     color: ${cores.beje};
 
@@ -23,8 +25,15 @@ export const CartContent = styled.div`
         margin-top: 40px;
 
         span {
-            margin-left: 208px;
+            margin-left: 8px;
         }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
     }
 
     button {
@@ -44,7 +53,6 @@ export const CartItem = styled.li`
     padding: 8px;
     background-color: ${cores.beje};
     color: ${cores.salmao};
-    margin-top: 16px;
 
     img {
         width: 80px;
@@ -52,10 +60,25 @@ export const CartItem = styled.li`
     }
 `
 
-export const Infos = styled.div`
+export const EditButtons = styled.div`
     display: block;
+    text-align: end;
+    padding-left: 48px; 
+
+    img, button {
+        max-width: 16px;
+        max-height: 16px;
+        margin: 8px;
+        margin-left: 16px;
+    }
+
+    img {
+        margin-top: 16px;
+    }
+`
+
+export const Infos = styled.div`
     margin-left: 8px;
-    margin-right: 108px;
 
     p {
         margin-top: 16px;

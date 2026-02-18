@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store";
-import { Cart, CartContent, CartItem, Infos } from "./styles.ts";
+import { Cart, CartContent, CartItem, EditButtons, Infos } from "./styles.ts";
 import { remove, increment } from "../../store/reducers/cart.ts";
 import { useState } from "react";
 import Delivery from "../Delivery/index.tsx";
 import { Props } from "../FoodCard/index.tsx";
+import lixeira from '../../images/lixeira.png';
 
 const FoodCart = ({onClose}: Props) => {
     const dispatch = useDispatch();
@@ -32,10 +33,10 @@ const FoodCart = ({onClose}: Props) => {
                         <h4>{item.title}</h4>
                         <p>R$ {item.preco.toFixed(2)} x {item.quantidade}</p>
                     </Infos>
-                    <div>
+                    <EditButtons>
                         <button onClick={() => dispatch(increment(item.id))}>+</button>
-                        <button onClick={() => dispatch(remove(item.id))}>Remover</button>
-                    </div>
+                        <img src={lixeira} alt="lixeira" onClick={() => dispatch(remove(item.id))}></img>
+                    </EditButtons>
                     </CartItem>
                 ))}
             </ul>
@@ -43,7 +44,14 @@ const FoodCart = ({onClose}: Props) => {
                 Valor total: <span>R$ {total.toFixed(2)}</span>
             </p>
             <button type="button" onClick={GoDelivery}>Continuar com a entrega</button>
-            {mostrarDelivery &&<Delivery onClose={CloseDelivery}/>}
+            {mostrarDelivery &&<Delivery onClose={CloseDelivery} food={{
+                    id: 0,
+                    nome: "",
+                    descricao: "",
+                    preco: 0,
+                    porcao: "",
+                    foto: ""
+                }}/>}
             <button type="button" onClick={onClose}>Fechar</button>
         </CartContent>
         </Cart>
