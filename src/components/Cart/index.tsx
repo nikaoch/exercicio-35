@@ -15,7 +15,7 @@ const FoodCart = ({onClose}: Props) => {
     const total = items.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
 
     const GoDelivery = () => {
-        setMostrarDelivery(true)
+        setMostrarDelivery(true) 
     }
 
     const CloseDelivery = () => {
